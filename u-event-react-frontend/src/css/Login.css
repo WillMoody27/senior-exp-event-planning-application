@@ -1,0 +1,334 @@
+/*CSS file associated with Login and Registration Overlays*/
+
+.root {
+  --primary-black: #000;
+  --primary-white: #fff;
+  --base-transition: all 0.3s ease-in-out;
+  --primary-backdrop-filter: blur(7px);
+}
+
+/* Login MAIN */
+.login-div {
+  /* position: absolute; */
+  z-index: 200;
+  width: 100%;
+  height: 100vh;
+  /* background: linear-gradient(45deg, #fe6b8b 30%, #ff8e53 90%); */
+  background: #fff;
+  /* ADDED */
+  position: fixed;
+  top: 0;
+}
+/* END OF Login MAIN */
+
+.login-screen-container {
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
+
+  width: 100%;
+}
+/* Login Page Form */
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 380px;
+  margin: auto;
+  padding: 3rem;
+}
+
+/* MAIN CONTAINER (FORM) */
+.login-email-container {
+  /* display: grid;
+  background: purple;
+  grid-template-columns: 30% 70%; */
+  display: flex;
+}
+/* END OF MAIN CONTAINER (FORM) */
+/* BRAND LOGO */
+.brand-logo {
+  font-weight: 900;
+  text-align: left;
+  margin-bottom: 10px;
+}
+/* END OF BRAND LOGO */
+/* LOGIN IMAGE */
+.login-image-container {
+  width: 100%;
+  height: 100%;
+  background: url("../assets/ugur-arpaci-U18V0ToioFU-unsplash.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: contain;
+}
+
+.login-image-container {
+  max-width: 1140px;
+}
+@media (max-width: 968px) {
+  .login-image-container {
+    display: none;
+  }
+}
+/* END OF LOGIN IMAGE */
+/* AUTH BUTTONS */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  position: relative;
+}
+/* DIVIDER */
+.custom-or-text {
+  outline: 0.8px solid #000;
+  display: inline-block;
+  padding: 0.1rem 1rem;
+  border-radius: 80px;
+  font-weight: 300;
+  position: absolute;
+  z-index: 15;
+  background: #fff;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.divider {
+  margin: 1.5rem 0;
+  position: relative;
+}
+/* DIVIDER */
+
+.btn-icon {
+  font-size: 25px;
+  width: 30px;
+  height: 30px;
+}
+.google-btn,
+.facebook-btn,
+.apple-btn {
+  outline: 1px solid #000;
+  color: #000;
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 0.8rem;
+  margin-top: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.google-btn:hover,
+.facebook-btn:hover,
+.apple-btn:hover {
+  background-color: #000;
+  color: #fff;
+  transform: translateY(-7px);
+}
+/* AUTH BUTTONS */
+
+/* Broke Code For Main UI Commented It Out For Now - Button keyword is interfering with other elements*/
+.overlay1-button,
+.overlay-close-button {
+  align-items: center;
+  background: #000;
+  border: none;
+
+  border-radius: 10px;
+  color: #000;
+  font-size: 16px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+label {
+  text-align: left;
+  padding: 0;
+}
+input {
+  margin-bottom: 10px;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-family: sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.login-button {
+  align-items: center;
+  background: #000;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 900;
+  letter-spacing: 1px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.link-button,
+.create-button {
+  background: none;
+  border: none;
+  color: #000;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+  margin: 10px 0;
+}
+/* Register Overlay 1 */
+
+.overlay1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(7px);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+}
+
+.overlay1-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.overlay1-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 10px;
+  font-size: 14px;
+  max-width: 100%;
+  padding: 3rem;
+  width: 450px;
+  height: 550px;
+  gap: 1.5rem;
+}
+
+.overlay1-button-container {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.overlay-close-button {
+  position: absolute;
+  display: block;
+  margin-left: auto;
+  margin-right: 5rem;
+  background-color: #ffffff7e;
+  z-index: 50;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.create-close-btn-container {
+  width: 100%;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.checkbox-container input {
+  margin: 0;
+  margin-right: 5px;
+  width: auto;
+}
+
+/* Register Overlay 2 */
+
+.overlay2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(7px);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  z-index: 9999;
+}
+
+.overlay2-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.overlay2-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  border: 1px solid #000;
+  border-radius: 10px;
+  width: 450px;
+  gap: 1.5rem;
+}
+
+.overlay-input-container {
+  width: 70%;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  flex-direction: column;
+  height: 100%;
+}
+.overlay2-form {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.overlay2-button {
+  align-items: center;
+  background: #fff;
+  border: none;
+  border-radius: 10px;
+  color: #000;
+  font-size: 16px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px 0;
+}

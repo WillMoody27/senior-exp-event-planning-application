@@ -1,0 +1,105 @@
+.App {
+  text-align: center;
+  display: flex;
+  height: 100%;
+  width: 100vw;
+}
+@media (max-width: 1140px) {
+  .App {
+    display: block;
+  }
+}
+
+/* Sidebar */
+.sidebar-wrapper {
+  height: 100%;
+}
+.sidebar-component-wrapper {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.divide-wall {
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 30%,
+    rgb(128, 0, 255) 100%
+  );
+  z-index: -1;
+  position: fixed;
+  width: 100vw;
+
+  animation: moveDown 3s ease-in-out forwards;
+}
+
+@keyframes moveDown {
+  0% {
+    transform: translateY(50%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Component Heading Text Section */
+.component-heading {
+  font-weight: 900;
+  font-size: 30px;
+  opacity: 0.5;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+}
+
+/* Split Animations Added */
+.component-heading .component-text-1 {
+  color: var(--color-white);
+  opacity: 0;
+  animation: splitUp 2s ease-in-out forwards;
+}
+.component-heading .component-text-2 {
+  opacity: 0;
+  color: var(--color-white);
+  animation: splitDown 2s ease-in-out 0.5s forwards;
+}
+
+@keyframes splitUp {
+  0% {
+    opacity: 0;
+    transform: translate(0%, 300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0%, 0px);
+  }
+}
+@keyframes splitDown {
+  0% {
+    opacity: 0;
+    transform: translate(0%, 600px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0%, 0px);
+  }
+}
+
+@media (max-width: 980px) {
+  .App {
+    justify-content: center;
+  }
+}
+
+.App .content {
+  flex-grow: 1;
+}
