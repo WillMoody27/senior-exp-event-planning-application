@@ -13,7 +13,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ManageEvents from "./components/mainui/ManageEvents";
 import Footer from "./components/footer/Footer";
 
-//
 function App() {
   return (
     <>
