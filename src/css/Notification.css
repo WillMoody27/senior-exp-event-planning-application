@@ -1,0 +1,43 @@
+/* .notification {
+  opacity: 0;
+  display: block;
+  position: fixed;
+  text-align: center;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  font-weight: 900;
+  border-radius: 50px;
+  transition: all 0.2s ease-in-out;
+} */
+
+.notification {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  opacity: 1;
+  padding: 0.8rem;
+  height: auto;
+  background: #000000e7;
+  color: #fff;
+  font-size: 1.2rem;
+
+  z-index: 100;
+  transition: all 0.2s ease-in-out;
+}
+
+.notification-tag-text {
+  opacity: 1;
+  padding: 0.8rem;
+  height: auto;
+  background: #000;
+  margin: 1rem;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 10px;
+  z-index: 100;
+  transition: all 0.2s ease-in-out;
+}

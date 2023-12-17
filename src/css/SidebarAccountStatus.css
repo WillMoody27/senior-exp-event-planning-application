@@ -1,0 +1,44 @@
+.sidebar-account-status {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.sidebar-account-status-container {
+  display: flex;
+  align-items: center;
+  bottom: 10px;
+  gap: 0.5rem;
+  outline: 1px solid var(--primary-black);
+  padding: 0.4rem 0.8rem;
+  border-radius: 50px;
+}
+
+.sidebar-account-status-container .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: all 0.25s ease-in-out;
+}
+.sidebar-account-status-container .avatar:hover {
+  transform: scale(1.05);
+}
+
+.sidebar-account-status-name {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--primary-white);
+  background: var(--primary-black);
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+}
+
+/* HIDE ELEMENTS ON COLLAPED SIDEBAR */
+.sidebar .sidebar-account-status-name {
+  display: none;
+}
+.sidebar .sidebar-account-status-container {
+  outline: none;
+}
