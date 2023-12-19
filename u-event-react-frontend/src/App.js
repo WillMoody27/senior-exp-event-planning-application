@@ -1,6 +1,7 @@
 import React from "react";
 import EventBoard from "./components/mainui/EventBoard";
 import Sidebar from "./components/sidebar/Sidebar";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Account from "./components/Account/Account";
 import EventDetails from "./components/mainui/EventDetails";
@@ -9,7 +10,6 @@ import Login from "./components/login/Login";
 import "./css/Login.css";
 import "./css/Account.css";
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ManageEvents from "./components/mainui/ManageEvents";
 import Footer from "./components/footer/Footer";
 

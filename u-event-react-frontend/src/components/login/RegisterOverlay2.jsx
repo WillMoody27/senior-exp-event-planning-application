@@ -1,6 +1,9 @@
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faX } from "@fortawesome/free-solid-svg-icons";
+
 const RegistrationOverlay2 = ({ onClose, onRegisterEmail }) => {
   const [notification, setNotification] = useState(false);
   const [notificationText, setNotificationText] = useState("");
@@ -125,18 +128,13 @@ const RegistrationOverlay2 = ({ onClose, onRegisterEmail }) => {
             handleSubmit(e);
           }}
         >
-          <div className="create-close-btn-container">
-            <button
-              className="overlay-close-button"
-              data-testid="close-overlay-button"
-              onClick={onClose}
-            >
-              {/*
-                    // The following line is a unicode character for the multiplication sign
-                    */}
-              {"\u00D7"}
-            </button>
-          </div>
+          {/* Close Button */}
+          <FontAwesomeIcon
+            icon={faX}
+            className="overlay-close-button"
+            onClick={onClose}
+          />
+          {/* Close Button */}
 
           <div className="create-close-btn-container">
             {/* <button className="overlay-back-button"> back </button>
@@ -145,10 +143,13 @@ const RegistrationOverlay2 = ({ onClose, onRegisterEmail }) => {
               close{" "}
             </button> */}
           </div>
-          <h2 className="overlay-2-header"> Create Account By Email </h2>
+          <h2 className="overlay-2-header"> Create An Account </h2>
           <div className="overlay-input-container">
-            <label htmlFor="firstName"> First Name </label>
+            <label className="form-field-label" htmlFor="firstName">
+              First Name
+            </label>
             <input
+              className="form-input-field"
               type="text"
               id="firstName"
               data-testid="first-name"
@@ -160,8 +161,12 @@ const RegistrationOverlay2 = ({ onClose, onRegisterEmail }) => {
                 localStorage.setItem("firstName", e.target.value);
               }}
             />
-            <label htmlFor="lastName"> Last Name </label>
+            <label className="form-field-label" htmlFor="lastName">
+              {" "}
+              Last Name{" "}
+            </label>
             <input
+              className="form-input-field"
               type="text"
               id="lastName"
               data-testid="last-name"
@@ -173,8 +178,12 @@ const RegistrationOverlay2 = ({ onClose, onRegisterEmail }) => {
                 localStorage.setItem("lastName", e.target.value);
               }}
             />
-            <label htmlFor="email"> E-mail </label>
+            <label className="form-field-label" htmlFor="email">
+              {" "}
+              E-mail{" "}
+            </label>
             <input
+              className="form-input-field"
               type="text"
               id="email"
               data-testid="email"
@@ -186,8 +195,12 @@ const RegistrationOverlay2 = ({ onClose, onRegisterEmail }) => {
                 localStorage.setItem("username", e.target.value);
               }}
             />
-            <label htmlFor="password"> Password </label>
+            <label className="form-field-label" htmlFor="password">
+              {" "}
+              Password{" "}
+            </label>
             <input
+              className="form-input-field"
               type="password"
               id="password"
               data-testid="password"
@@ -196,8 +209,11 @@ const RegistrationOverlay2 = ({ onClose, onRegisterEmail }) => {
               required
               onChange={handleChange}
             />
-            <label htmlFor="passwordConfirm"> Confirm Password </label>
+            <label className="form-field-label" htmlFor="passwordConfirm">
+              Confirm Password
+            </label>
             <input
+              className="form-input-field"
               type="password"
               id="passwordConfirm"
               data-testid="password-confirm"
@@ -207,14 +223,13 @@ const RegistrationOverlay2 = ({ onClose, onRegisterEmail }) => {
               onChange={handleChange}
             />
             <button
-              className="overlay2-button"
+              className="register-button"
               type="submit"
               onClick={(e) => {
                 handleSubmit(e);
               }}
             >
-              {" "}
-              Register{" "}
+              Register
             </button>
           </div>
         </form>

@@ -1,5 +1,3 @@
-/*CSS file associated with Login and Registration Overlays*/
-
 .root {
   --primary-black: #000;
   --primary-white: #fff;
@@ -7,28 +5,21 @@
   --primary-backdrop-filter: blur(7px);
 }
 
-/* Login MAIN */
-.login-div {
-  /* position: absolute; */
+.login-section {
   z-index: 200;
   width: 100%;
   height: 100vh;
-  /* background: linear-gradient(45deg, #fe6b8b 30%, #ff8e53 90%); */
   background: #fff;
-  /* ADDED */
   position: fixed;
   top: 0;
 }
-/* END OF Login MAIN */
 
 .login-screen-container {
   display: flex;
   justify-content: space-around;
   border-radius: 10px;
-
   width: 100%;
 }
-/* Login Page Form */
 .form-container {
   display: flex;
   justify-content: space-between;
@@ -38,38 +29,106 @@
 .login-form {
   display: flex;
   flex-direction: column;
-
   min-width: 380px;
   margin: auto;
   padding: 3rem;
 }
-
-/* MAIN CONTAINER (FORM) */
 .login-email-container {
-  /* display: grid;
-  background: purple;
-  grid-template-columns: 30% 70%; */
   display: flex;
 }
-/* END OF MAIN CONTAINER (FORM) */
-/* BRAND LOGO */
 .brand-logo {
   font-weight: 900;
   text-align: left;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
-/* END OF BRAND LOGO */
-/* LOGIN IMAGE */
 .login-image-container {
   width: 100%;
   height: 100%;
-  background: url("../assets/ugur-arpaci-U18V0ToioFU-unsplash.jpg");
+  /* background: url("../assets/ugur-arpaci-U18V0ToioFU-unsplash.jpg"); */
+  /* background: url("../assets/gustavo-fring-pexels-photo-3984358.webp"); */
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   object-fit: contain;
 }
+.login-image-container .image-1,
+.login-image-container .image-2,
+.login-image-container .image-3 {
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+.login-image-container .image-1-block {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+
+  animation: moveUpDown 3s ease-in-out infinite;
+}
+.login-image-container .image-2-block {
+  position: absolute;
+  top: 15%;
+  right: 25%;
+  transform: translate(-50%, -50%);
+
+  animation: moveUpDown 3s ease-in-out infinite;
+}
+
+.login-image-container .image-3-block {
+  position: absolute;
+  bottom: 15%;
+  right: 23%;
+  transform: translate(-50%, -50%);
+
+  animation: moveUpDown 3s ease-in-out infinite;
+}
+
+.text-bubble {
+  position: absolute;
+  top: -50px;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 1rem;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(7px);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  animation: moveUpDown 3s ease-in-out infinite;
+  z-index: inherit;
+}
+
+.login-image-container .image-block:hover .text-bubble,
+.login-image-container .image-block:hover {
+  animation-play-state: paused;
+  transition: all 0.3s ease-in-out;
+  z-index: 99999 !important;
+}
+.login-image-container .image-block:hover .text-bubble {
+  left: 0%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+/* Images */
 
 .login-image-container {
   max-width: 1140px;
@@ -79,8 +138,7 @@
     display: none;
   }
 }
-/* END OF LOGIN IMAGE */
-/* AUTH BUTTONS */
+
 .button-container {
   display: flex;
   justify-content: center;
@@ -105,67 +163,36 @@
   margin: 1.5rem 0;
   position: relative;
 }
-/* DIVIDER */
 
 .btn-icon {
-  font-size: 25px;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 }
 .google-btn,
 .facebook-btn,
 .apple-btn {
+  background-color: #8000ff;
+  color: #fff;
   outline: 1px solid #000;
-  color: #000;
-  border-radius: 10px;
-  font-size: 16px;
-  padding: 0.8rem;
+  border-radius: 50%;
+  padding: 0.5rem;
   margin-top: 10px;
   transition: all 0.3s ease-in-out;
+  outline: none;
 }
 .google-btn:hover,
 .facebook-btn:hover,
 .apple-btn:hover {
-  background-color: #000;
-  color: #fff;
-  transform: translateY(-7px);
+  transform: translateY(-7px) scale(1.1);
+  background: #000;
 }
 /* AUTH BUTTONS */
 
 /* Broke Code For Main UI Commented It Out For Now - Button keyword is interfering with other elements*/
-.overlay1-button,
-.overlay-close-button {
-  align-items: center;
-  background: #000;
-  border: none;
-
-  border-radius: 10px;
-  color: #000;
-  font-size: 16px;
-  padding: 10px;
-  cursor: pointer;
-  margin: 10px 0;
-}
-
-label {
-  text-align: left;
-  padding: 0;
-}
-input {
-  margin-bottom: 10px;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-  font-family: sans-serif;
-  width: 100%;
-  box-sizing: border-box;
-  outline: none;
-}
 
 .login-button {
   align-items: center;
-  background: #000;
+  background: #8000ff;
   border: none;
   border-radius: 10px;
   color: #fff;
@@ -177,6 +204,11 @@ input {
   padding: 10px;
   cursor: pointer;
   margin: 10px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.login-button:hover {
+  background: #000;
 }
 
 .link-button,
@@ -184,96 +216,22 @@ input {
   background: none;
   border: none;
   color: #000;
-  text-decoration: underline;
   cursor: pointer;
   font-size: 14px;
   padding: 0;
-  margin: 10px 0;
-}
-/* Register Overlay 1 */
-
-.overlay1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(7px);
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0px;
 }
 
-.overlay1-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 5rem;
-  height: 100%;
-  width: 100%;
-  transition: all 0.3s ease-in-out;
+.link-button:hover,
+.create-button:hover {
+  text-decoration: underline;
+  background: none;
 }
-
-.overlay1-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-  border: 1px solid #000;
-  border-radius: 10px;
-  font-size: 14px;
-  max-width: 100%;
-  padding: 3rem;
-  width: 450px;
-  height: 550px;
-  gap: 1.5rem;
-}
-
-.overlay1-button-container {
-  margin-bottom: 2rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.overlay-close-button {
-  position: absolute;
-  display: block;
-  margin-left: auto;
-  margin-right: 5rem;
-  background-color: #ffffff7e;
-  z-index: 50;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.create-close-btn-container {
-  width: 100%;
-}
-
-.checkbox-container {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-.checkbox-container input {
-  margin: 0;
-  margin-right: 5px;
-  width: auto;
-}
-
-/* Register Overlay 2 */
 
 .overlay2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(7px);
   width: 100%;
   height: 100%;
@@ -281,54 +239,101 @@ input {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
   z-index: 9999;
+  overflow: hidden;
+}
+.overlay-2-header {
+  font-weight: 900;
+  margin-top: 1rem;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  padding-bottom: 1rem;
 }
 
-.overlay2-content {
+.overlay2-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  height: 100%;
-  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  width: 450px;
   transition: all 0.3s ease-in-out;
 }
 
-.overlay2-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #000000;
-  border: 1px solid #000;
-  border-radius: 10px;
-  width: 450px;
-  gap: 1.5rem;
-}
-
 .overlay-input-container {
-  width: 70%;
+  width: 100%;
   display: flex;
-  gap: 1rem;
-  padding: 1rem;
+  padding: 2rem;
   flex-direction: column;
   height: 100%;
 }
-.overlay2-form {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
 
-.overlay2-button {
+.register-button {
   align-items: center;
-  background: #fff;
-  border: none;
+  background: #8000ff;
+  border: 1px solid #fff;
+  color: #fff;
   border-radius: 10px;
-  color: #000;
   font-size: 16px;
   padding: 10px;
   cursor: pointer;
   margin: 10px 0;
+}
+.register-button:hover {
+  background: #000;
+}
+
+.overlay-close-button {
+  background: #8000ff;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.overlay-close-button:hover {
+  transform: scale(1.1) rotate(180deg);
+  background: red;
+}
+
+.custom-hr {
+  width: 100%;
+  height: 1px;
+  background: #000;
+}
+
+.form-field-label {
+  font-weight: 700;
+  text-align: left;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+.form-input-field {
+  margin-bottom: 10px;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-family: sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+}
+.form-input-field:focus {
+}
+.form-input-field::placeholder {
+  color: #ccc;
+}
+
+@media (max-width: 450px) {
+  .overlay2-form {
+    width: 350px;
+  }
 }

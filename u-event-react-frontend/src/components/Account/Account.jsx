@@ -9,6 +9,7 @@ import {
   fetchInterests,
   fetchUserInterests,
 } from "../../handlers/api";
+import placeholderImage from "../../assets/avatar-icon.svg";
 
 // Global Constants
 const BASEURL = "http://localhost:8080";
@@ -416,7 +417,7 @@ const Account = () => {
                       ) : (
                         <img
                           className="user-profile-image"
-                          src="https://via.placeholder.com/150"
+                          src={placeholderImage}
                           width={100}
                           height={100}
                           alt="image_alt"
@@ -431,6 +432,28 @@ const Account = () => {
                       ref={fileInputRef}
                     />
                   </div>
+                  {/* <input type="file" onChange={handleFileChange} /> */}
+                  <div className="profile-img-btn-container">
+                    <label htmlFor="fileInput" className="fileInputLabel">
+                      Choose a file
+                    </label>
+                    <input
+                      type="file"
+                      id="fileInput"
+                      className="fileInput"
+                      onChange={handleFileChange}
+                    />
+                    <button
+                      className="upload-image-button"
+                      onClick={(e) => {
+                        handleUpload(e);
+                        // redirect to the same page
+                        window.location.reload();
+                      }}
+                    >
+                      Upload Image
+                    </button>
+                  </div>
                   <div className="user-profile-card-body-content-text">
                     <div className="meta-data">
                       <h3>{`${firstName ? firstName : ""} ${
@@ -441,15 +464,10 @@ const Account = () => {
                       <p>{username}</p>
                     </div>
                   </div>
-                  <input type="file" onChange={handleFileChange} />
-                  <button
-                    onClick={(e) => {
-                      handleUpload(e);
-                      // redirect to the same page
-                      window.location.reload();
-                    }}
-                  >
-                    Upload Image
+                </div>
+                <div className="logout-button-container">
+                  <button onClick={handleLogout} className="logout-button">
+                    Logout
                   </button>
                 </div>
               </div>
@@ -461,24 +479,32 @@ const Account = () => {
               className={`user-details-card
             ${editDetails ? "edit" : ""}`}
             >
+              <div
+                className={`user-details-card-header
+                ${editDetails ? "" : "not-edit"}`}
+              >
+                <h2 className="edit-details-header">Manage Account Details</h2>
+                <button
+                  className={`edit-user-details-button ${
+                    editDetails ? "" : "not-edit"
+                  }`}
+                  onClick={
+                    editDetails
+                      ? () => setEditDetails(false)
+                      : () => setEditDetails(true)
+                  }
+                >
+                  Edit User Details
+                </button>
+              </div>
               <div className="user-details-card-body">
-                <div className="user-details-card-header">
-                  <h2>Details</h2>
-                </div>
                 <div className="user-details-card-body-content">
-                  <button
-                    className={`edit-user-details-button`}
-                    onClick={
-                      editDetails
-                        ? () => setEditDetails(false)
-                        : () => setEditDetails(true)
-                    }
-                  >
-                    Edit User Details
-                  </button>
                   <form
                     onSubmit={handleSubmit}
                     className="accounts-form-container"
+                    style={{
+                      display: editDetails ? "block" : "none",
+                    }}
                   >
                     <div className="user-details-card-body-content-text">
                       <div>
@@ -582,18 +608,19 @@ const Account = () => {
                           onChange={handleChangeField}
                         />
                       </div>
-                    </div>
-                    <div className="user-details-card-body-content-button">
+
                       <button
                         className="submit-updated-user-details"
                         type="submit-updated-user-details"
+                        style={{
+                          display: editDetails ? "block" : "none",
+                        }}
                         onClick={(e) => {
                           handleSubmit(e);
                           alert("Updated User Details");
                         }}
                       >
-                        {" "}
-                        Update{" "}
+                        Update Account
                       </button>
                     </div>
                   </form>
@@ -643,7 +670,6 @@ const Account = () => {
                         ))}
                         {/* Interests Text El's */}
                       </div>
-                      <hr />
                       <div className="interests-container-bubble">
                         {/* Dynamic Interest Here */}
                         <h2 className="user-interest-text">Your Interests</h2>
@@ -713,11 +739,6 @@ const Account = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="logout-button-container">
-        <button onClick={handleLogout} className="logout-button">
-          Logout
-        </button>
       </div>
     </div>
   );

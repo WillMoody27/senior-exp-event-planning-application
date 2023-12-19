@@ -38,13 +38,11 @@
 }
 .user-profile-container.edit {
   height: 1080px;
-  transition: var(--base-transition); /* Smooth expand/collapse animation */
+  transition: var(--base-transition);
 }
 
 /* User Profile Card styles */
 .user-profile-card {
-  /* position: absolute; */
-  background: linear-gradient(135deg, #836bfe 30%, #ff8e53 90%);
   background-color: var(--primary-white);
   border-radius: 10px;
   padding: 20px;
@@ -56,6 +54,7 @@
 
 .user-profile-card-body {
   display: flex;
+  flex-direction: column;
   align-items: center;
   margin: 20px;
 }
@@ -97,7 +96,7 @@
   gap: 2rem;
   padding: 2rem;
   height: 100%;
-  min-height: 500px;
+  min-height: 400px;
 }
 /* User Details Card styles */
 .user-details-card {
@@ -124,6 +123,7 @@
   transition: all 0.3s ease; /* Smooth expand/collapse
   animation */
   height: 100%;
+  position: relative;
 }
 
 /* User Details Card form styles */
@@ -133,6 +133,10 @@
   flex-direction: column;
   flex-wrap: wrap;
   gap: 0.5rem;
+  background: #000;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 20px;
 }
 .user-details-card-body-content-text {
   display: flex;
@@ -168,11 +172,39 @@
 /* Edit button styles */
 .user-details-card .edit-user-details-button {
   margin-top: 10px;
-  background-color: var(--primary-black);
-  color: var(--primary-white);
+  background: #000;
+  color: #fff;
   border: none;
-  padding: 5px 10px;
+  font-size: 16px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 50px;
   cursor: pointer;
+  transition: var(--base-transition);
+}
+.user-details-card .edit-user-details-button.not-edit {
+  font-size: 20px;
+}
+.edit-user-details-button:hover {
+  background: #8000ff;
+}
+.user-details-card .user-details-card-header.not-edit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.edit-details-header {
+  font-weight: 900;
+}
+
+.user-details-card {
+  position: relative;
 }
 
 /* Interests Card styles */
@@ -184,7 +216,7 @@
   height: fit-content;
   width: 100%;
   height: 100%;
-  min-height: 500px;
+  min-height: 420px;
 }
 
 /* .interests-selection-box {
@@ -218,9 +250,8 @@
   height: fit-content;
   width: 100%;
   height: 100%;
-  min-height: 500px;
+  min-height: 420px;
   flex-wrap: wrap;
-  background: linear-gradient(270deg, #fe6b8b 30%, #ff8e53 90%);
 }
 
 .events-signup-listing {
@@ -245,6 +276,7 @@
   align-items: center;
 }
 .user-profile-image {
+  border: 1px solid #ccc;
 }
 .close-icon {
   position: absolute;
@@ -279,24 +311,42 @@
 .logout-button-container {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
 }
 
 .logout-button {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
+  border-radius: 50px;
+  background: #000;
+  color: #fff;
+}
+.logout-button:hover {
+  background: #2b2b2b;
+}
+.upload-image-button {
+  color: #fff;
+  background: #8000ff;
+  border: 1px solid #8000ff;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: var(--base-transition);
+}
+.upload-image-button:hover {
+  background: #000;
+  color: #fff;
+  border: 1px solid transparent;
 }
 
 /* RESPONSIVENESS (MEDIA QUERIES) */
 @media (max-width: 1440px) {
-  .user-details-card.edit {
-    height: 500px;
-  }
   .user-details-card {
     height: 800px;
     width: 100%;
-    transition: var(--base-transition); /* Smooth expand/collapse animation */
+    transition: var(--base-transition);
   }
   .user-profile-card {
     width: 100%;
@@ -305,16 +355,13 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    /* TOP LEFT BOTTOM RIGHT */
     padding: 2rem 2rem 0rem 2rem;
     height: 100%;
   }
   .user-details-card-body-content-text {
     height: 100% !important;
   }
-  .user-details-container.edit {
-    transition: var(--base-transition); /* Smooth expand/collapse animation */
-  }
+
   .user-profile-lower-container {
     flex-direction: column;
     height: 100%;
@@ -333,8 +380,14 @@
 /* INTERESTS */
 .interest-text-block {
 }
+.interest-text-block:nth-child(1) {
+  border-bottom: 1px solid #000;
+  padding-bottom: 1rem;
+}
 .user-interest-text {
   padding: 1rem 0rem;
+  font-weight: 900;
+  font-size: 30px;
 }
 
 /* Delete Icon Interests */
@@ -353,9 +406,16 @@
   color: #fff;
   font-size: 14px;
 }
+.interest-text {
+  border-radius: 50px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  transition: var(--base-transition);
+  border: 1px solid #000;
+}
 
 .interest-text:hover {
-  border: 1px solid #000;
+  border: 1px solid #ccc;
 }
 
 .interest-text:hover .interests-close-icon {
@@ -364,8 +424,38 @@
   opacity: 1;
   border: 2px solid #fff;
 }
+
 .interests-close-icon:hover {
   background: red !important;
+}
+.accounts-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.user-details-card-body-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.submit-updated-user-details {
+  background: #000;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 1rem auto;
+  transition: var(--base-transition);
 }
 
 /* Account Events Block */
@@ -430,7 +520,8 @@
 .avail-interest-text {
   border: 1px solid #000;
   background: #ffffff;
-  border-radius: 10px;
+  border-radius: 50px;
+  font-weight: 700;
   cursor: pointer !important;
   z-index: inherit;
   transition: var(--base-transition);
@@ -444,13 +535,6 @@
   box-shadow: 0 5px 0px rgba(0, 0, 0, 0.2);
 }
 
-.interest-text {
-  border-radius: 10px;
-  border: 1px solid transparent;
-  font-weight: 800;
-  transition: var(--base-transition);
-  background: #ffffff;
-}
 .interest-text:hover {
   border: 1px solid #000;
   background: #000;
@@ -458,4 +542,33 @@
   border: 1px solid transparent;
   transform: translateY(-5px);
   box-shadow: 0 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.fileInputLabel {
+  padding: 10px 15px;
+
+  border: 1px solid #000;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--base-transition);
+}
+.fileInputLabel:hover {
+  background: #000;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+.fileInput {
+  display: none;
+}
+
+.profile-img-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin: 1rem auto;
 }

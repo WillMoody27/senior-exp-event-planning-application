@@ -293,7 +293,19 @@ const EventCardForm = ({
               readOnly={isEdit ? false : true}
             />
           </div>
-          <button type="submit">Update Event</button>
+          <button
+            type="submit"
+            style={{
+              backgroundColor: "#8000ff",
+              color: "white",
+              marginLeft: "10px",
+              borderRadius: "50px",
+              fontWeight: "900",
+              fontSize: "18px",
+            }}
+          >
+            Update Event
+          </button>
         </div>
       </article>
     </form>

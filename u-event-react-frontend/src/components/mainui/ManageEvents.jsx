@@ -128,10 +128,28 @@ const ManageEvents = () => {
                     width={400}
                     username={event.user.username}
                   />
-                  <button onClick={() => deleteEvent(event.eventId)}>
+                  <button
+                    onClick={() => deleteEvent(event.eventId)}
+                    style={{
+                      backgroundColor: "#000",
+                      color: "white",
+                      marginLeft: "10px",
+                      borderRadius: "50px",
+                      fontWeight: "900",
+                      fontSize: "16px",
+                    }}
+                  >
                     Delete
                   </button>
                   <button
+                    style={{
+                      backgroundColor: "#000",
+                      color: "white",
+                      marginLeft: "10px",
+                      borderRadius: "50px",
+                      fontWeight: "900",
+                      fontSize: "16px",
+                    }}
                     onClick={() => {
                       setIsEdit(true);
                       startEditingEvent(event);

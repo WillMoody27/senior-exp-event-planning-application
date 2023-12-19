@@ -10,6 +10,8 @@ import {
   faGoogle,
 } from "@fortawesome/free-brands-svg-icons";
 import loginimage from "../../assets/ugur-arpaci-U18V0ToioFU-unsplash.jpg";
+import loginimage2 from "../../assets/gustavo-fring-pexels-photo-3984358.webp";
+import loginimage3 from "../../assets/event-login-image.jpeg";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -35,39 +37,6 @@ const Login = () => {
     });
     console.log(createForm);
   };
-
-  // handle Login
-
-  // "http://localhost:8080/api/users/login"
-
-  // const handleLogin = (e) => {
-  //   e.preventDefault();
-
-  //   const { username, password } = this.state;
-  //   //send login data to backend using fetchAPI
-  //   fetch("http://localhost:8080/api/users/login", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify({ username, password }),
-  //   })
-  //     .then((response) => {
-  //       if (response.ok) {
-  //         // The request was successful, you can handle the response here
-  //         console.log("Event created successfully");
-  //         // Reset the form or navigate to a different page
-  //       } else {
-  //         // The request failed, handle the error here
-  //         console.error("Failed to create event");
-  //         // Display an error message or handle the error as needed
-  //       }
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error:", error);
-  //       // Handle any network errors here
-  //     });
-  // };
 
   const handlesubmit = async (e) => {
     e.preventDefault();
@@ -129,7 +98,8 @@ const Login = () => {
   };
 
   // Create state to track whether overlay[Modal] is open or not
-  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false); // Set back to false when dont with css styling
+
   // Arrow function to open the overlay
   const openOverlay = () => {
     console.log("openOverlay");
@@ -142,7 +112,7 @@ const Login = () => {
   };
 
   return (
-    <div className="login-div">
+    <div className="login-section">
       <div className="show-overlay-container">
         {/*
             // Boolean expression to check if overlay is open or not
@@ -161,37 +131,44 @@ const Login = () => {
               onSubmit={handlesubmit}
             >
               <h2 className="brand-logo">U-Event</h2>
-              <label htmlFor="email"> E-mail </label>
+              <label className="form-field-label" htmlFor="email">
+                {" "}
+                E-mail{" "}
+              </label>
               <input
+                className="form-input-field"
                 type="text"
                 id="email"
                 data-testid="email"
                 name="username"
+                placeholder="E-mail"
                 required
                 onChange={(e) => {
                   handleChange(e);
                   localStorage.setItem("username", e.target.value);
-                  // Reset firstName and lastName from localStorage
                   localStorage.removeItem("firstName");
                   localStorage.removeItem("lastName");
                 }}
               />
-              <label htmlFor="password"> Password </label>
+              <label className="form-field-label" htmlFor="password">
+                {" "}
+                Password{" "}
+              </label>
               <input
+                className="form-input-field"
                 type="password"
                 id="password"
                 data-testid="password"
                 name="password"
+                placeholder="Password"
                 required
                 onChange={handleChange}
               />
               <button className="login-button" type="submit">
-                {" "}
-                Login{" "}
+                Login
               </button>
               <button className="link-button" type="Forgot Password">
-                {" "}
-                Forgot Password{" "}
+                Forgot Password
               </button>
               <button
                 className="create-button"
@@ -199,12 +176,12 @@ const Login = () => {
                 type="Create Account"
                 onClick={openOverlay}
               >
-                Don't have an account! Create one here
+                Don't have an account?
               </button>
               {/* Auth Provider Buttons */}
               <div className="divider">
                 <p className="custom-or-text">or</p>
-                <hr />
+                <div className="custom-hr"></div>
               </div>
               <div className="button-container">
                 <a
@@ -239,9 +216,36 @@ const Login = () => {
             </form>
             <Link to="/" ref={linkRef} style={{ display: "none" }}></Link>
             <div className="login-image-container">
-              {/* IMAGE */}
-
-              {/* IMAGE */}
+              <div className="image-1-block image-block">
+                <img
+                  className="image-1"
+                  src={loginimage}
+                  alt="login"
+                  width={300}
+                  height={300}
+                />
+                <p className="text-bubble">Parades</p>
+              </div>
+              <div className="image-2-block image-block">
+                <img
+                  className="image-2"
+                  src={loginimage2}
+                  alt="login"
+                  width={300}
+                  height={300}
+                />
+                <p className="text-bubble">Yoga</p>
+              </div>
+              <div className="image-3-block image-block">
+                <img
+                  className="image-3"
+                  src={loginimage3}
+                  alt="login"
+                  width={300}
+                  height={300}
+                />
+                <p className="text-bubble">Concerts</p>
+              </div>
             </div>
           </div>
         </div>
