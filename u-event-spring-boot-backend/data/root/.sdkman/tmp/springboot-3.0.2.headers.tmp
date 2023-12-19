@@ -1,0 +1,24 @@
+HTTP/1.1 302 Found
+Server: nginx/1.19.10
+Date: Sat, 11 Feb 2023 05:03:03 GMT
+Content-Length: 0
+Connection: keep-alive
+X-Sdkman-ArchiveType: zip
+location: https://repo1.maven.org/maven2/org/springframework/boot/spring-boot-cli/3.0.2/spring-boot-cli-3.0.2-bin.zip
+
+HTTP/2 200 
+etag: "c01d9d626a83040243ce75ea40143695"
+content-type: application/zip
+last-modified: Fri, 20 Jan 2023 01:29:30 GMT
+x-checksum-md5: c01d9d626a83040243ce75ea40143695
+x-checksum-sha1: a810fad66f358fe578bdba2c41d6f17f606f405a
+via: 1.1 varnish, 1.1 varnish
+accept-ranges: bytes
+date: Sat, 11 Feb 2023 05:03:04 GMT
+age: 0
+x-served-by: cache-iad-kjyo7100112-IAD, cache-den8256-DEN
+x-cache: HIT, MISS
+x-cache-hits: 235, 0
+x-timer: S1676091784.065865,VS0,VE70
+content-length: 4692569
+

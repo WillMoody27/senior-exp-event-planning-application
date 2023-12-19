@@ -1,0 +1,16 @@
+/app/swdev/src/test/java/com/cs4360msudenver/ueventspringbootbackend/image/ImageServiceTest.java
+/app/swdev/src/test/java/com/cs4360msudenver/ueventspringbootbackend/User/AuthenticationResponseTest.java
+/app/swdev/src/test/java/com/cs4360msudenver/ueventspringbootbackend/Event/EventServiceTest.java
+/app/swdev/src/test/java/com/cs4360msudenver/ueventspringbootbackend/Interests/InterestControllerTest.java
+/app/swdev/src/test/java/com/cs4360msudenver/ueventspringbootbackend/UEventSpringBootBackendApplicationTests.java
+/app/swdev/src/test/java/com/cs4360msudenver/ueventspringbootbackend/User/ControllerTest.java
+/app/swdev/src/test/java/com/cs4360msudenver/ueventspringbootbackend/User/UserTest.java
+/app/swdev/src/test/java/com/cs4360msudenver/ueventspringbootbackend/User/JwtUtilTest.java
+/app/swdev/src/test/java/com/cs4360msudenver/ueventspringbootbackend/image/CustomImageUploadExceptionTest.java
+/app/swdev/src/test/java/com/cs4360msudenver/ueventspringbootbackend/User/UserControllerTest.java
+/app/swdev/src/test/java/com/cs4360msudenver/ueventspringbootbackend/Event/EventControllerTest.java
+/app/swdev/src/test/java/com/cs4360msudenver/ueventspringbootbackend/Interests/InterestServiceTest.java
+/app/swdev/src/test/java/com/cs4360msudenver/ueventspringbootbackend/User/JwtRequestFilterTest.java
+/app/swdev/src/test/java/com/cs4360msudenver/ueventspringbootbackend/User/UserServiceTest.java
+/app/swdev/src/test/java/com/cs4360msudenver/ueventspringbootbackend/User/AuthenticationRequestTest.java
+/app/swdev/src/test/java/com/cs4360msudenver/ueventspringbootbackend/image/ImageControllerTest.java
