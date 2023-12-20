@@ -4,6 +4,19 @@
 #### (Event Planning Application)
 ### Fall Semester 2023 - (Capstone Project)
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Objective Of App](#objective-of-app)
+- [Challenges and Lessons Learned](#challenges-and-lessons-learned)
+- [Features](#features)
+- [Methodology (Technologies Used, Deployment)](#methodology-technologies-used-deployment)
+- [Deployment Practices](#deployment-practices)
+- [Future Work](#future-work)
+- [Contributors](#contributors)
+- [Acknowledgements](#acknowledgements)
+
+
 <div style="text-align:center;">
   <img src="assests/u_event-5.png" alt="drawing" width="500px"/>
     <hr/>
@@ -26,18 +39,6 @@
 [//]: # (![App Screenshot]&#40;assests/u_event-9.png&#41;)
 
 [//]: # (![App Screenshot]&#40;assests/u_event-18.png&#41;)
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Objective Of App](#objective-of-app)
-- [Challenges and Lessons Learned](#challenges-and-lessons-learned)
-- [Features](#features)
-- [Methodology (Technologies Used, Deployment)](#methodology-technologies-used-deployment)
-- [Deployment Practices](#deployment-practices)
-- [Future Work](#future-work)
-- [Contributors](#contributors)
-- [Acknowledgements](#acknowledgements)
 
 ## Objective Of App
 
