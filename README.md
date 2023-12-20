@@ -103,11 +103,11 @@ Some things that we hope to improve on include implementing a more robust user a
 
 ## Contributors (Team Members)
 
-- [William Hellems-Moody](William Hellems-Moody)
-- [Adam Abubakar](Adam Abubakar)
-- [Eduardo Fuentes](Eduardo Fuentes)
-- [Muhammad Qamar](Muhammad Qamar)
+- William Hellems-Moody
+- Adam Abubakar
+- Eduardo Fuentes
+- Muhammad Qamar
 
 ## Acknowledgements
 
-- [Dr. Dan Pittman](Dr Dan Pittman)
+- Dr. Dan Pittman
