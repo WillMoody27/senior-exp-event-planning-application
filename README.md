@@ -1,7 +1,8 @@
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-7f7980b617ed060a017424585567c406b6ee15c891e84e1186181d67ecf80aa0.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=11646394)
 
-# U-Event - Planning Application (Capstone Project)
-### Fall Semester 2023 (Senior Year)
+# U-Event 
+#### (Event Planning Application)
+### Fall Semester 2023 - (Capstone Project)
 
 <div style="text-align:center;">
   <img src="assests/u_event-5.png" alt="drawing" width="500px"/>
@@ -26,6 +27,17 @@
 
 [//]: # (![App Screenshot]&#40;assests/u_event-18.png&#41;)
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Objective Of App](#objective-of-app)
+- [Challenges and Lessons Learned](#challenges-and-lessons-learned)
+- [Features](#features)
+- [Methodology (Technologies Used, Deployment)](#methodology-technologies-used-deployment)
+- [Deployment Practices](#deployment-practices)
+- [Future Work](#future-work)
+- [Contributors](#contributors)
+- [Acknowledgements](#acknowledgements)
 
 ## Objective Of App
 
@@ -89,3 +101,13 @@ The Agile approach facilitated a dynamic and responsive development environment.
 
 Some things that we hope to improve on include implementing a more robust user authentication and verification system to ensure a user's credentials are secure and protected. We also intend to optimize the mobile experience even more to enhance the overall UX across all devices and improve/build upon the existing desktop UI with more fluid animations and motion design elements.
 
+## Contributors (Team Members)
+
+- [William Hellems-Moody](William Hellems-Moody)
+- [Adam Abubakar](Adam Abubakar)
+- [Eduardo Fuentes](Eduardo Fuentes)
+- [Muhammad Qamar](Muhammad Qamar)
+
+## Acknowledgements
+
+- [Dr. Dan Pittman](Dr Dan Pittman)
