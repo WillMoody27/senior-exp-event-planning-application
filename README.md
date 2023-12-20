@@ -44,6 +44,8 @@
 
 The primary objective of this mobile-responsive event planning application is to provide a seamless, user-friendly platform for individuals to create, RSVP, and manage events. It aims to facilitate easy organization and participation in a variety of events, ensuring users can effortlessly reserve their spot or host their own gatherings. The application's design focuses on accessibility and convenience, ensuring users can engage with the platform on any device, enhancing the overall experience of community engagement and social interaction through events.
 
+[Back to Top](#table-of-contents)
+
 ## Challenges and Lessons Learned
 
 Throughout our web app development, we encountered several key challenges that acted as significant learning opportunities. Deployment-wise, using a client application to manage front-end and back-end communication could enhance our deployment process. We also identified normalization improvements for more efficient data management and faced hurdles with user interest/event management and image storage. Despite making progress, ongoing work remains, particularly in refining deployment, database optimization, and innovating user management solutions. These challenges taught us valuable lessons as we strive to create a more efficient and user-friendly web app, even though we're still addressing issues like user authentication.
@@ -54,6 +56,8 @@ Throughout our web app development, we encountered several key challenges that a
   <img src="assests/event-details-cards-responsive.png" alt="drawing" width="400px" height="auto"/>
   <img src="assests/event-details-cards.png" alt="drawing" width="400px" height="auto"/>
 </div>
+
+[Back to Top](#table-of-contents)
 
 ### User-Friendly Interface
 
@@ -71,6 +75,8 @@ U-Event includes all the tools needed for effective event management. Organizers
 
 RSVP management is effortless with U-Event. Guests can confirm attendance with a single click, allowing organizers to efficiently plan and make decisions based on guest responses.
 
+[Back to Top](#table-of-contents)
+
 ## Methodology (Technologies Used, Deployment)
 
 ### Tech Stack
@@ -85,6 +91,8 @@ Heroku - Deploying with Heroku was seamless. Using its cloud-based Platform as a
 
 In our web app development, we utilized Mocha, Chai, and Sinon for front-end testing, achieving a total coverage of 76%. These tools ensured smoother asynchronous code handling, clearer assertions, and precise API interaction control. On the back-end, leveraging JUnit and Mockito, we reached a total of 92% coverage with focused Java unit testing. This comprehensive testing strategy across both front-end and back-end systems resulted in an overall cumulative coverage of 85%. These tools played a pivotal role in ensuring a robust and reliable UI/UX, guaranteeing our app functions as intended.
 
+[Back to Top](#table-of-contents)
+
 # Deployment Practices
 ### Test-Driven Development (TDD)
 
@@ -98,9 +106,13 @@ Regular reviews and feedback loops were integral to our Agile process. These all
 
 The Agile approach facilitated a dynamic and responsive development environment. It empowered us to address changing priorities efficiently, resulting in a product that met user expectations and maintained high standards of quality throughout its evolution.
 
+[Back to Top](#table-of-contents)
+
 ## Future Work
 
 Some things that we hope to improve on include implementing a more robust user authentication and verification system to ensure a user's credentials are secure and protected. We also intend to optimize the mobile experience even more to enhance the overall UX across all devices and improve/build upon the existing desktop UI with more fluid animations and motion design elements.
+
+[Back to Top](#table-of-contents)
 
 ## Contributors (Team Members)
 
@@ -109,6 +121,10 @@ Some things that we hope to improve on include implementing a more robust user a
 - Eduardo Fuentes
 - Muhammad Qamar
 
+[Back to Top](#table-of-contents)
+
 ## Acknowledgements
 
 - Dr. Dan Pittman
+
+[Back to Top](#table-of-contents)
