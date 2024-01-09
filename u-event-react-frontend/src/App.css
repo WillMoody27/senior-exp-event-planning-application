@@ -22,11 +22,11 @@
 
 .divide-wall {
   height: 100%;
-  background: linear-gradient(
+  /* background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.3) 30%,
-    rgb(128, 0, 255) 100%
-  );
+    rgb(106, 106, 106) 100%
+  ); */
   z-index: -1;
   position: fixed;
   width: 100vw;

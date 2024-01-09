@@ -2,7 +2,8 @@
   border-top: 1px solid #fff;
   width: 100%;
   text-align: center;
-  margin-top: 3rem;
+  background: #000;
+  z-index: 1000;
 }
 
 .logo-content {
@@ -30,21 +31,21 @@
 .footer-content {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  justify-content: space-between;
   text-decoration: none;
   color: #fff;
   padding: 0.5rem;
-  height: 100%;
+  line-height: 1.5;
 }
 
 .footer-social-media ul {
   display: flex;
   justify-content: center;
-  gap: 0.8rem;
+  gap: 2rem;
+  margin-top: 1.5rem;
 }
 .footer-social-media ul li {
   list-style: none;
-  margin-right: 1rem;
   font-size: 25px;
 }
 

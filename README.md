@@ -1,21 +1,33 @@
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-7f7980b617ed060a017424585567c406b6ee15c891e84e1186181d67ecf80aa0.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=11646394)
 
-# U-Event 
+# U-Event
+
 #### (Event Planning Application)
+
 ### Fall Semester 2023 - (Capstone Project)
 
 ## Table of Contents
 
-- [Overview](#overview)
-- [Objective Of App](#objective-of-app)
-- [Challenges and Lessons Learned](#challenges-and-lessons-learned)
+- [U-Event](#u-event) - [(Event Planning Application)](#event-planning-application)
+  - [Fall Semester 2023 - (Capstone Project)](#fall-semester-2023---capstone-project)
+  - [Table of Contents](#table-of-contents)
+  - [Objective Of App](#objective-of-app)
+  - [Challenges and Lessons Learned](#challenges-and-lessons-learned)
 - [Features](#features)
-- [Methodology (Technologies Used, Deployment)](#methodology-technologies-used-deployment)
+  - [User-Friendly Interface](#user-friendly-interface)
+  - [Easy Event Creation](#easy-event-creation)
+  - [Complete Event Management](#complete-event-management)
+  - [Efficient RSVP Handling](#efficient-rsvp-handling)
+  - [Methodology (Technologies Used, Deployment)](#methodology-technologies-used-deployment)
+    - [Tech Stack](#tech-stack)
+    - [Deployment](#deployment)
+    - [Testing](#testing)
 - [Deployment Practices](#deployment-practices)
-- [Future Work](#future-work)
-- [Contributors](#contributors)
-- [Acknowledgements](#acknowledgements)
-
+  - [Test-Driven Development (TDD)](#test-driven-development-tdd)
+  - [Agile Methodology](#agile-methodology)
+  - [Future Work](#future-work)
+  - [Contributors (Team Members)](#contributors-team-members)
+  - [Acknowledgements](#acknowledgements)
 
 <div style="text-align:center;">
   <img src="assests/u_event-5.png" alt="drawing" width="500px"/>
@@ -30,15 +42,11 @@
     <hr/>
 </div>
 
-[//]: # (![App Screenshot]&#40;assests/u_event-5.png&#41;)
-
-[//]: # (![App Screenshot]&#40;assests/u_event-6.png &#41;)
-
-[//]: # (![App Screenshot]&#40;assests/u_event-12.png&#41;)
-
-[//]: # (![App Screenshot]&#40;assests/u_event-9.png&#41;)
-
-[//]: # (![App Screenshot]&#40;assests/u_event-18.png&#41;)
+[//]: # "![App Screenshot](assests/u_event-5.png)"
+[//]: # "![App Screenshot](assests/u_event-6.png )"
+[//]: # "![App Screenshot](assests/u_event-12.png)"
+[//]: # "![App Screenshot](assests/u_event-9.png)"
+[//]: # "![App Screenshot](assests/u_event-18.png)"
 
 ## Objective Of App
 
@@ -94,6 +102,7 @@ In our web app development, we utilized Mocha, Chai, and Sinon for front-end tes
 [Back to Top](#table-of-contents)
 
 # Deployment Practices
+
 ### Test-Driven Development (TDD)
 
 - Test-Driven Development (TDD): Our development process strictly adhered to the Test-Driven Development (TDD) methodology throughout the project lifecycle. Prioritizing test writing before implementing new features or functionalities was a core principle. By following TDD religiously, we ensured that every aspect of the application had corresponding tests validating its functionality. This approach significantly contributed to the reliability, stability, and maintainability of our codebase. The comprehensive test suite provided a safety net, allowing us to confidently refactor and extend our code while maintaining expected behavior.
@@ -111,20 +120,5 @@ The Agile approach facilitated a dynamic and responsive development environment.
 ## Future Work
 
 Some things that we hope to improve on include implementing a more robust user authentication and verification system to ensure a user's credentials are secure and protected. We also intend to optimize the mobile experience even more to enhance the overall UX across all devices and improve/build upon the existing desktop UI with more fluid animations and motion design elements.
-
-[Back to Top](#table-of-contents)
-
-## Contributors (Team Members)
-
-- William Hellems-Moody
-- Adam Abubakar
-- Eduardo Fuentes
-- Muhammad Qamar
-
-[Back to Top](#table-of-contents)
-
-## Acknowledgements
-
-- Dr. Dan Pittman
 
 [Back to Top](#table-of-contents)

@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import "../../css/CreateEvent.css";
-import "../../css/EventCard.css";
-import EventCard from "../../components/mainui/EventCard";
+import "./CreateEvent.css";
+import "../../components/event_card/EventCard.css";
+import EventCard from "../event_card/EventCard";
 import { handleVerification } from "../../handlers/handler";
 
 const CreateEvent = () => {

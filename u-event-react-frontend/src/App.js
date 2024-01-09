@@ -1,16 +1,13 @@
 import React from "react";
-import EventBoard from "./components/mainui/EventBoard";
+import EventBoard from "./components/eventboard/EventBoard";
 import Sidebar from "./components/sidebar/Sidebar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Account from "./components/Account/Account";
-import EventDetails from "./components/mainui/EventDetails";
-import CreateEvent from "./components/mainui/CreateEvent";
+import EventDetails from "./components/event_card/EventDetails";
+import CreateEvent from "./components/create_event/CreateEvent";
 import Login from "./components/login/Login";
-import "./css/Login.css";
-import "./css/Account.css";
 import "./App.css";
-import ManageEvents from "./components/mainui/ManageEvents";
 import Footer from "./components/footer/Footer";
 
 function App() {
@@ -29,7 +26,6 @@ function App() {
             <Route path="/login/register" element={<Login />} />
             <Route path="/event-details" element={<EventDetails />} />
             <Route path="/create-events" element={<CreateEvent />} />
-            <Route path="/manage-events" element={<ManageEvents />} />
           </Routes>
           <p className="component-heading">
             <p className="component-text-1">U-</p>{" "}

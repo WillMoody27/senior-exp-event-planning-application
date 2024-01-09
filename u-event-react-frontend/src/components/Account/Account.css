@@ -5,17 +5,15 @@
   --primary-black: #000;
   --primary-white: #fff;
   --base-transition: all 0.3s ease-in-out;
+  --primary-border: 1px solid #b0b0b0;
 }
-/* Overall page layout */
+
 .accounts-page {
   width: 100%;
 }
 
-/* Grid layout for content */
 .accounts-grid-block {
-  /* background: green; */
   display: flex;
-  /* move the content at the bottom of the div element */
   align-items: flex-end;
   margin-bottom: 2rem;
 }
@@ -23,18 +21,18 @@
 .grid-content {
   height: 100%;
   width: 100%;
-  transition: var(--base-transition); /* Smooth expand/collapse animation */
+  transition: var(--base-transition);
 }
 
 .user-profile-container {
   display: flex;
   align-items: center;
   gap: 2rem;
-  /* TOP LEFT BOTTOM RIGHT */
+
   padding: 2rem 2rem 0rem 2rem;
   height: 500px;
   padding-bottom: 10px;
-  transition: var(--base-transition); /* Smooth expand/collapse animation */
+  transition: var(--base-transition);
 }
 .user-profile-container.edit {
   height: 1080px;
@@ -43,13 +41,11 @@
 
 /* User Profile Card styles */
 .user-profile-card {
-  background-color: var(--primary-white);
+  border: var(--primary-border);
   border-radius: 10px;
   padding: 20px;
-  /* background: red; */
   height: 100%;
   width: 700px;
-  box-shadow: var(--account-box-shadow);
 }
 
 .user-profile-card-body {
@@ -66,7 +62,6 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  width: 100%;
   font-size: 18px;
 }
 
@@ -106,8 +101,8 @@
   padding: 20px;
   width: 100%;
   height: 100%;
-  box-shadow: var(--account-box-shadow);
-  transition: var(--base-transition); /* Smooth expand/collapse animation */
+  border: var(--primary-border);
+  transition: var(--base-transition);
   overflow: hidden;
 }
 
@@ -150,15 +145,12 @@
   border-radius: 50px;
   margin-top: 1rem;
   border: none;
-  background: rgba(201, 201, 201, 0.2);
   padding: 10px 20px;
   width: 100%;
   font-size: 16px;
-  transition: var(--base-transition); /* Smooth expand/collapse animation */
+  border: var(--primary-border);
 }
-.user-details-card-body-content-text input.shadow-true {
-  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
+
 @media screen and (max-width: 768px) {
   .user-details-card-body-content-text {
     width: 100%;
@@ -212,41 +204,19 @@
   background-color: var(--primary-white);
   border-radius: 10px;
   padding: 20px;
-  box-shadow: var(--account-box-shadow);
+  border: var(--primary-border);
   height: fit-content;
   width: 100%;
   height: 100%;
   min-height: 420px;
 }
 
-/* .interests-selection-box {
-  gap: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-top: 20px;
-} */
-
-/* .interest-wrapper span {
-  cursor: pointer;
-  font-size: 24px;
-} */
-
-/* .interest-wrapper input[type="checkbox"] {
-  margin: 5px 10px 0 10px;
-  width: 20px;
-} */
-
-/* INTERESTS CODE */
-
-/* END OF INTERESTS CODE */
-
 /* Events Card styles */
 .events-card {
   background-color: var(--primary-white);
   border-radius: 10px;
   padding: 20px;
-  box-shadow: var(--account-box-shadow);
+  border: var(--primary-border);
   height: fit-content;
   width: 100%;
   height: 100%;
@@ -313,26 +283,28 @@
   justify-content: center;
 }
 
+/* LOGOUT BUTTON */
 .logout-button {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
   border-radius: 50px;
-  background: #000;
+  background: red;
+  border: none;
+  margin-top: 2rem;
   color: #fff;
 }
 .logout-button:hover {
   background: #2b2b2b;
 }
 .upload-image-button {
-  color: #fff;
-  background: #8000ff;
-  border: 1px solid #8000ff;
+  color: #000000;
   border-radius: 50px;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
   margin: 10px 0;
+  border: 1px solid #000;
   transition: var(--base-transition);
 }
 .upload-image-button:hover {

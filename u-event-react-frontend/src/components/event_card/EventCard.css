@@ -8,7 +8,6 @@
 }
 
 .match-tag {
-  /* background: var(--primary-white); */
   color: var(--primary-white);
   border-radius: 20px;
   font-size: 12px;
@@ -20,7 +19,6 @@
   font-weight: 800;
   display: inline-block;
   margin-bottom: 1rem;
-  /* background: #000000b0; */
   border: 1px solid var(--primary-white);
 }
 .event-avatar {
@@ -46,7 +44,7 @@
   color: #ffffff;
   position: relative;
   opacity: 0.8;
-  /* Move Content to bottom of card */
+
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -145,6 +143,8 @@
   border-radius: 20px;
   padding: 0.2rem;
   font-size: 16px;
+  border: 1px solid var(--primary-white);
+  padding: 0.2rem 1rem;
 }
 
 .attend-block {
@@ -163,16 +163,7 @@
   border-radius: 10px;
   background: var(--primary-white);
   background: none;
+
+  padding: 0.5rem 1rem;
   color: var(--primary-white);
 }
-/* .attend-btn-2 {
-  border: none;
-  outline: 0.9px solid #cccccc;
-  font-weight: 800;
-  font-size: 16px;
-  padding: 0rem 1rem !important;
-  border-radius: 10px;
-  background: var(--primary-white);
-  background: none;
-  color: var(--primary-white);
-} */

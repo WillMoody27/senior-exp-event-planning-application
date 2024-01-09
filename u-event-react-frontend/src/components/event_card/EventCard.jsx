@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../../css/EventCard.css";
+import "./EventCard.css";
 import { AvatarImage } from "../commonElements";
 import {
   fetchAndSetImageBase64,

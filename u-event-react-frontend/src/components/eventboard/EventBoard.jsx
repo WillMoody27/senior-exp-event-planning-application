@@ -1,28 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
-import EventCard from "./EventCard";
-import "../../css/EventBoard.css";
-import "../../css/EventCard.css";
-import rectImageOne from "../../assets/right-rect-1.svg";
-import feedIcon from "../../assets/feed-icon.svg";
+// CSS
+import "./EventBoard.css";
+import "../../components/event_card/EventCard.css";
+// APIs and Handlers
+import { fetchEvents } from "../../handlers/api";
 import {
   handleFilterChange,
   handleSearchChange,
-  filterData,
+  handleVerification,
 } from "../../handlers/handler";
-import { fetchEvents } from "../../handlers/api";
-import { handleVerification } from "../../handlers/handler";
+// Components
+import EventCard from "../event_card/EventCard";
 
 const EventBoard = () => {
   handleVerification();
-
-  const [selectedEvent, setSelectedEvent] = useState(null);
-  const [backBtn, setBackBtn] = useState(false);
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState("all");
   const [filteredData, setFilteredData] = useState([]);
-  const [searchInput, setSearchInput] = useState(""); // New state for search input
+  const [searchInput, setSearchInput] = useState("");
 
   useEffect(() => {
     fetchEvents().then((data) => {
@@ -46,7 +42,6 @@ const EventBoard = () => {
           : "User"
       }!`}</p>
 
-      <img src={feedIcon} className="feed-icon" alt="feedicon" />
       <div className="event-board-top">
         <div className="event-board-header">
           <div className="event-board-filter">
@@ -103,7 +98,11 @@ const EventBoard = () => {
                   className="event-board-event"
                 >
                   <div className="zoom-effect">
-                    <EventCard {...event} eventCreator={event.user} height={600} />
+                    <EventCard
+                      {...event}
+                      eventCreator={event.user}
+                      height={600}
+                    />
                   </div>
                 </Link>
               ))}

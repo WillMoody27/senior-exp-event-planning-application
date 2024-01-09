@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, Params, redirect } from "react-router-dom";
-import "../../css/EventDetails.css";
+import "./EventDetails.css";
 import { AvatarImage } from "../commonElements";
 import { fetchUserDetails, fetchImageData } from "../../handlers/api"; // Import the new API functions
 
@@ -147,8 +147,7 @@ const EventDetails = () => {
   };
 
   return (
-    <section className="event-detail"
-    data-testid = "event-detail">
+    <section className="event-detail" data-testid="event-detail">
       <div className="event-card-container">
         {/* EVENT CARD */}
         <article

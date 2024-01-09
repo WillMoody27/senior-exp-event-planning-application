@@ -26,6 +26,7 @@
   transition: all var(--transition-duration) var(--transition-timing-function);
   position: relative;
   width: 100%;
+  min-height: 80vh;
 }
 
 .event-board-top {
@@ -40,13 +41,20 @@
 }
 
 .event-board-header {
-  border-bottom: 1px solid var(--color-black);
+  border: 1px solid var(--border-color);
   padding: var(--padding-small);
   display: flex;
-  align-items: center;
-  gap: var(--gap-medium);
-
   animation: move-in 1s ease-in-out;
+
+  margin-right: auto;
+  border-radius: 50px;
+  padding: 0.5rem 0.8rem;
+}
+
+@media (max-width: 678px) {
+  .event-board-header {
+    border: none;
+  }
 }
 
 .event-board-title {
@@ -69,10 +77,8 @@
   border: none;
   padding: var(--padding-medium);
   align-items: center;
-  border-radius: 10px;
-  outline: none;
   text-align: center;
-  outline: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
   animation: move-in 1.25s ease-in-out;
 }
 .event-board-filter select {
@@ -170,29 +176,6 @@
   }
 }
 
-.feed-icon {
-  height: 60px;
-  width: 50px;
-  border-radius: 15px;
-  position: absolute;
-  top: 10px;
-  right: 4rem;
-
-  animation: grow 3s ease-in-out infinite;
-}
-
-@keyframes grow {
-  0% {
-    transform: scale(0.98);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(0.98);
-  }
-}
-
 .card-pop-block {
   background: red;
   position: relative;
@@ -240,9 +223,6 @@
   }
 }
 @media (max-width: 1140px) {
-  .event-board {
-    margin-top: 3rem;
-  }
   .welcome-text {
     font-size: 25px;
   }
@@ -254,8 +234,7 @@
   align-items: center;
   border: 1px solid var(--border-color);
   transition: all var(--transition-duration) var(--transition-timing-function);
-  border-radius: 20px;
-  box-shadow: var(--box-shadow);
+  border-radius: 50px;
   animation: move-in 1.25s ease-in-out;
 }
 .search-container .search-bar {
@@ -264,10 +243,13 @@
   max-width: 600px;
   min-width: 200px;
   border: none;
-  margin-bottom: 0;
+  text-align: center;
   background: transparent;
   transition: all var(--transition-duration) var(--transition-timing-function);
   animation: move-in 1.25s ease-in-out;
+}
+.search-container .search-bar:focus {
+  outline: none;
 }
 .search-container .search-btn {
   border: none;

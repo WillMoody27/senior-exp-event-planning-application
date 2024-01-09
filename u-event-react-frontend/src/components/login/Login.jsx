@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 // import RegistrationOverlay1 from "./RegisterOverlay1";
 import RegistrationOverlay2 from "./RegisterOverlay2";
-import "../../css/Login.css";
+import "./Login.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faApple,
